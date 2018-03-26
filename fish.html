@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			html,body{
+				height: 100%;
+				
+			}
+			body{
+				overflow: hidden;
+				background-image: linear-gradient(to bottom,#C4EAF5,#79B2C1);
+			}
+			.fishbox{
+				width: 200px;
+				height: 200px;
+				/*border: solid 1px #ccc;*/
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				animation: fishMove 20s infinite;
+				
+			}
+			.fish{
+				width: 174px;
+				height: 126px;
+				background: url(image/fish8.png) no-repeat left top;
+				animation: fish 1s infinite steps(12);
+			}
+			@keyframes fish{
+				0%{
+					
+				}
+				100%{
+					background-position-y: -1512px;
+				}
+			}
+			@keyframes fishMove{
+				0%{
+					transform: translateX(0px) translateY(0px)  rotate(0deg);
+				}
+				25%{
+					transform: translateX(700px) translateY(50px) rotate(50deg);
+				}
+				50%{
+					transform: translateX(900px) translateY(400px) rotate(150deg);
+				}
+				75%{
+					transform: translateX(300px) translateY(500px) rotate(240deg);
+				}
+				100%{
+					transform: translateX(0px) translateY(0) rotate(360deg);
+				}
+			}
+			.shark1box{
+				animation: shark1move 30s infinite;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.shark1{
+				width: 509px;
+				height: 270px;
+				background: url(image/shark1.png) no-repeat left top;
+				animation: shark1 1s infinite steps(8);
+			}
+			@keyframes shark1{
+				0%{
+					background-position-y: 0;
+				}
+				100%{
+					background-position-y: -2160px;
+				}
+			}
+			@keyframes shark1move{
+				0%{
+					transform: translateX(-600px);
+				}
+				100%{
+					transform: translateX(1500px);
+				}
+			}
+			
+			.shark2box{
+				animation: shark2move 25s infinite;
+			}
+			.shark2{
+				width: 509px;
+				height: 273px;
+				background: url(image/shark2.png) no-repeat left top;
+				animation: shark2 1s infinite steps(12);
+			}
+			@keyframes shark2{
+				0%{
+					background-position-y: 0;
+				}
+				100%{
+					background-position-y: -3276px;
+				}
+			}
+			@keyframes shark2move{
+				0%{
+					transform: translate(1500px,800px) rotate(-130deg);
+				}
+				100%{
+					transform: translate(-2000px,-1000px) rotate(-130deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fishbox">
+			<div class="fish"></div>
+		</div>
+		<div class="shark1box">
+			<div class="shark1"></div>
+			
+		</div>
+		<div class="shark2box">
+			<div class="shark2"></div>
+			
+		</div>
+	</body>
+</html>
